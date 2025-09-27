@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "jest --ci",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --ci",
     "lint": "eslint ."
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "devDependencies": {
     "eslint": "^9.11.1",
